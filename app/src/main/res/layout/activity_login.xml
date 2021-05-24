@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:background="#E3242B">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/logo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:minWidth="100dp"
+            android:minHeight="100dp"/>
+
+        <TextView
+            android:id="@+id/txtSignUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sign In"
+            android:textColor="@color/white"
+            android:layout_below="@+id/imageView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:textSize="12pt"
+            android:textStyle="bold"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shadow_round"
+        android:paddingTop="30dp"
+        android:paddingBottom="30dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="180dp"
+        android:elevation="10dp"
+        >
+
+        <EditText
+            android:id="@+id/username1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext_rounded"
+            android:hint="Username"
+            android:textSize="8pt"
+            android:padding="15dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginLeft="25dp"
+            android:drawableLeft="@drawable/uil_user"
+            android:drawablePadding="20dp"
+            />
+
+        <EditText
+            android:id="@+id/password1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext_rounded"
+            android:hint="Password"
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/username1"
+            android:textSize="8pt"
+            android:padding="15dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginLeft="25dp"
+            android:drawableLeft="@drawable/uil_padlock"
+            android:drawablePadding="20dp"
+            />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btnsignin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="400dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginLeft="50dp"
+        android:text="Sing Up"
+        android:textAllCaps="false"
+        android:textSize="9pt"
+        android:backgroundTint="#E3242B"
+        android:padding="10dp"
+        />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        >
+
+        <TextView
+            android:id="@+id/txt1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="500dp"
+            android:layout_marginLeft="60dp"
+            android:text="__________"
+            android:textSize="8pt"
+            />
+
+        <TextView
+            android:id="@+id/txt2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toRightOf="@+id/txt1"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="505dp"
+            android:layout_marginLeft="10dp"
+            android:text="Sign In With"
+            android:textSize="8pt"
+            />
+
+        <TextView
+            android:id="@+id/txt3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toRightOf="@id/txt2"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="500dp"
+            android:layout_marginLeft="10dp"
+            android:text="__________"
+            android:textSize="8pt"
+            />
+
+        <ImageButton
+            android:id="@+id/icnFb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/icn_fb"
+            android:minHeight="50dp"
+            android:minWidth="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="30dp"
+            app:layout_constraintLeft_toLeftOf="@+id/txt1"
+            app:layout_constraintTop_toBottomOf="@+id/txt1"
+            />
+
+        <ImageButton
+            android:id="@+id/icnGoogle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/icn_google"
+            android:minHeight="50dp"
+            android:minWidth="50dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintLeft_toLeftOf="@+id/txt2"
+            app:layout_constraintRight_toRightOf="@+id/txt2"
+            app:layout_constraintTop_toBottomOf="@+id/txt2"
+            />
+
+        <ImageButton
+            android:id="@+id/icnTwitter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/icn_twitter"
+            android:minHeight="50dp"
+            android:minWidth="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="30dp"
+            app:layout_constraintRight_toRightOf="@+id/txt3"
+            app:layout_constraintTop_toBottomOf="@+id/txt3"
+            />
+
+        <TextView
+            android:id="@+id/txtHaveAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="650dp"
+            android:layout_marginLeft="60dp"
+            android:text="Don't Have an Account?"
+            android:textSize="8pt"
+            />
+
+        <Button
+            android:id="@+id/btnRegister"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toRightOf="@id/txtHaveAccount"
+            app:layout_constraintTop_toTopOf="@+id/txtHaveAccount"
+            app:layout_constraintBottom_toBottomOf="@+id/txtHaveAccount"
+            android:paddingLeft="5dp"
+            android:text="Register"
+            android:textSize="8pt"
+            android:textColor="#E3242B"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</RelativeLayout>

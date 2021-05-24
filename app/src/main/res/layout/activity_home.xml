@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeActivity">
+
+    <TextView
+        android:id="@+id/txtHai"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="20dp"
+        android:text="Haiii, James"
+        android:textColor="@color/black"
+        android:textSize="12pt"
+        android:textStyle="bold"
+        />
+
+    <EditText
+        android:id="@+id/search_home"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtHai"
+        android:layout_margin="20dp"
+        android:background="@drawable/edittext_rounded"
+        android:hint="Search for new knowledge!"
+        android:textSize="8pt"
+        android:padding="15dp"
+        android:drawableLeft="@drawable/icn_search"
+        android:drawablePadding="20dp"
+        />
+
+    <TextView
+        android:id="@+id/txtKelasPopuler"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@+id/search_home"
+        android:text="Kelas Populer"
+        android:textColor="@color/black"
+        android:textSize="10pt"
+        android:textStyle="bold"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvKelasPopuler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_below="@+id/txtKelasPopuler"
+        />
+
+    <TextView
+        android:id="@+id/txtSeminarPopuler"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@+id/rvKelasPopuler"
+        android:text="Seminar Populer"
+        android:textColor="@color/black"
+        android:textSize="10pt"
+        android:textStyle="bold"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvSeminarPopuler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_below="@+id/txtSeminarPopuler"
+        />
+
+</RelativeLayout>
