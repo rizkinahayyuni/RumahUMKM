@@ -42,10 +42,14 @@ public class LoginActivity extends AppCompatActivity {
                         startActivity(intent);
                     } else {
                         Toast.makeText(LoginActivity.this, "Infalid Credentials", Toast.LENGTH_SHORT);
+                        Intent intent = new Intent(getApplicationContext(), RegisterActivity.class);
+                        startActivity(intent);
+                        finish();
                     }
 
                 }
-
+                DB.addKelas();
+                DB.addSeminar();
             }
         });
 
