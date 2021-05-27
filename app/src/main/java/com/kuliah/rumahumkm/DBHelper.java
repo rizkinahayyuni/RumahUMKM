@@ -62,6 +62,12 @@ public class DBHelper extends SQLiteOpenHelper {
             return true;
     }
 
+    public void deleteAll() {
+        SQLiteDatabase MyDB = this.getWritableDatabase();
+        MyDB.execSQL("DELETE FROM kelas");
+        MyDB.execSQL("DELETE FROM seminar");
+    }
+
     public void addKelas() {
         String nama1 = "Tips Berjualan di E-Commerce";
         String kategori1 = "Pemasaran";
@@ -106,5 +112,27 @@ public class DBHelper extends SQLiteOpenHelper {
         contentValues3.put("nama_seminar", nama3);
         contentValues3.put("kategori_seminar", kategori3);
         MyDB.insert("seminar", null, contentValues3);
+    }
+
+    Cursor readAllDataKelas() {
+        String query = "SELECT * FROM kelas";
+        SQLiteDatabase MyDB = this.getReadableDatabase();
+
+        Cursor cursor = null;
+        if (MyDB != null) {
+            cursor = MyDB.rawQuery(query, null);
+        }
+        return cursor;
+    }
+
+    Cursor readAllDataSeminar() {
+        String query = "SELECT * FROM seminar";
+        SQLiteDatabase MyDB = this.getReadableDatabase();
+
+        Cursor cursor = null;
+        if (MyDB != null) {
+            cursor = MyDB.rawQuery(query, null);
+        }
+        return cursor;
     }
 }

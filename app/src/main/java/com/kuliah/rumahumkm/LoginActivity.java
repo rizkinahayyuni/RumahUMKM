@@ -48,6 +48,7 @@ public class LoginActivity extends AppCompatActivity {
                     }
 
                 }
+                DB.deleteAll();
                 DB.addKelas();
                 DB.addSeminar();
             }
