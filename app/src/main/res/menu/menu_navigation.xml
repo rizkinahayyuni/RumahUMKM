@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/dashboard"
+        android:title="Dashboard"
+        android:icon="@drawable/ic_home"/>
+
+    <item
+        android:id="@+id/kelas"
+        android:title="Kelas"
+        android:icon="@drawable/ic_kelas"/>
+
+    <item
+        android:id="@+id/seminar"
+        android:title="Seminar"
+        android:icon="@drawable/ic_seminar"/>
+
+    <item
+        android:id="@+id/akun"
+        android:title="Akun"
+        android:icon="@drawable/ic_akun"/>
+
+</menu>

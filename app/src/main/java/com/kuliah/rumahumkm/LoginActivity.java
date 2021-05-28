@@ -14,6 +14,7 @@ public class LoginActivity extends AppCompatActivity {
     EditText username, password;
     Button signin,register;
     DBHelper DB;
+    HomeActivity homeActivity;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,7 +39,10 @@ public class LoginActivity extends AppCompatActivity {
                     Boolean checkuserpass = DB.checkusernamepassword(user,pass);
                     if (checkuserpass==true) {
                         Toast.makeText(LoginActivity.this, "Sign In Successfull", Toast.LENGTH_SHORT);
+                        Bundle setUsername = new Bundle();
                         Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
+                        setUsername.putString("Username", user);
+                        intent.putExtras(setUsername);
                         startActivity(intent);
                     } else {
                         Toast.makeText(LoginActivity.this, "Infalid Credentials", Toast.LENGTH_SHORT);
