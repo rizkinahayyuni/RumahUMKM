@@ -32,51 +32,62 @@
         android:drawablePadding="20dp"
         />
 
-    <TextView
-        android:id="@+id/txtKelasPopuler"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:layout_marginLeft="20dp"
-        android:layout_below="@+id/search_home"
-        android:text="Kelas Populer"
-        android:textColor="@color/black"
-        android:textSize="10pt"
-        android:textStyle="bold"
-        />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvKelasPopuler"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
-        android:layout_below="@+id/txtKelasPopuler"
-        />
+        android:layout_height="match_parent"
+        android:layout_below="@id/search_home"
+        android:layout_marginBottom="60dp">
 
-    <TextView
-        android:id="@+id/txtSeminarPopuler"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:layout_marginLeft="20dp"
-        android:layout_below="@+id/rvKelasPopuler"
-        android:text="Seminar Populer"
-        android:textColor="@color/black"
-        android:textSize="10pt"
-        android:textStyle="bold"
-        />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvSeminarPopuler"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
-        android:layout_below="@+id/txtSeminarPopuler"
-        />
+            <TextView
+                android:id="@+id/txt_kelas_populer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:text="Kelas Populer"
+                android:textColor="@color/black"
+                android:textSize="10pt"
+                android:textStyle="bold" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvKelasPopuler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt_kelas_populer"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="30dp" />
+
+            <TextView
+                android:id="@+id/txt_seminar_populer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="20dp"
+                android:layout_below="@+id/rvKelasPopuler"
+                android:text="Seminar Populer"
+                android:textColor="@color/black"
+                android:textSize="10pt"
+                android:textStyle="bold"
+                />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvSeminarPopuler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_below="@+id/txt_seminar_populer"
+                />
+
+        </LinearLayout>
+    </ScrollView>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:layout_width="match_parent"

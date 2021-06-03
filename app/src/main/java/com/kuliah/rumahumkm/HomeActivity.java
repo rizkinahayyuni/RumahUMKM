@@ -99,7 +99,7 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     void storeDataKelasInArray() {
-        Cursor cursor = MyDB.readAllDataKelas();
+        Cursor cursor = MyDB.readDataKelasPopuler();
         if (cursor.getCount() == 0) {
             Toast.makeText(HomeActivity.this, "No Data Kelas", Toast.LENGTH_SHORT);
         } else {
@@ -112,7 +112,7 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     void storeDataSeminarInArray() {
-        Cursor cursor = MyDB.readAllDataSeminar();
+        Cursor cursor = MyDB.readDataSeminarPopuler();
         if (cursor.getCount() == 0) {
             Toast.makeText(HomeActivity.this, "No Data Seminar", Toast.LENGTH_SHORT);
         } else {

@@ -7,6 +7,46 @@
     android:layout_height="match_parent"
     tools:context=".SeminarActivity">
 
+    <EditText
+        android:id="@+id/search_seminar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtHai"
+        android:layout_margin="20dp"
+        android:background="@drawable/edittext_rounded"
+        android:hint="Search for new knowledge!"
+        android:textSize="8pt"
+        android:padding="15dp"
+        android:drawableLeft="@drawable/icn_search"
+        android:drawablePadding="20dp"
+        />
+
+    <TextView
+        android:id="@+id/txt_kategori_seminar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@+id/search_seminar"
+        android:text="Kategori Seminar"
+        android:textColor="@color/black"
+        android:textSize="10pt"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:id="@+id/txt_rekomendasi_seminar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@+id/txt_kategori_seminar"
+        android:text="Rekomendasi Seminar"
+        android:textColor="@color/black"
+        android:textSize="10pt"
+        android:textStyle="bold"
+        />
+
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

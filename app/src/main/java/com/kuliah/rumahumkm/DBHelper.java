@@ -125,6 +125,17 @@ public class DBHelper extends SQLiteOpenHelper {
         return cursor;
     }
 
+    Cursor readDataKelasPopuler() {
+        String query = "SELECT * FROM kelas LIMIT 3";
+        SQLiteDatabase MyDB = this.getReadableDatabase();
+
+        Cursor cursor = null;
+        if (MyDB != null) {
+            cursor = MyDB.rawQuery(query, null);
+        }
+        return cursor;
+    }
+
     Cursor readAllDataSeminar() {
         String query = "SELECT * FROM seminar";
         SQLiteDatabase MyDB = this.getReadableDatabase();
@@ -135,4 +146,16 @@ public class DBHelper extends SQLiteOpenHelper {
         }
         return cursor;
     }
+
+    Cursor readDataSeminarPopuler() {
+        String query = "SELECT * FROM seminar  LIMIT 3";
+        SQLiteDatabase MyDB = this.getReadableDatabase();
+
+        Cursor cursor = null;
+        if (MyDB != null) {
+            cursor = MyDB.rawQuery(query, null);
+        }
+        return cursor;
+    }
+
 }
