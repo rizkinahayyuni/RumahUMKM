@@ -7,19 +7,169 @@
     android:layout_height="match_parent"
     tools:context=".AkunActivity">
 
-    <ScrollView
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/img_pp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/photoprofile"
+        app:civ_border_color="@color/black"
+        app:civ_border_width="5dp"
+        android:layout_marginTop="30dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        />
+
+    <TextView
+        android:id="@+id/txt_nama_profil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nama"
+        android:textColor="@color/black"
+        android:textSize="12pt"
+        android:textStyle="bold"
+        android:layout_below="@id/img_pp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        />
+
+    <TextView
+        android:id="@+id/txt_no_profil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No. Telepon"
+        android:textColor="@color/black"
+        android:textSize="10pt"
+        android:textStyle="bold"
+        android:layout_below="@id/txt_nama_profil"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="20dp"
+        />
+
+    <TextView
+        android:id="@+id/txt_no_hp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+62 888 8888 8888"
+        android:textColor="@color/grey2"
+        android:textSize="8pt"
+        android:textStyle="bold"
+        android:layout_below="@id/txt_no_profil"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="50dp"
+        />
+
+    <TextView
+        android:id="@+id/txt_email_profil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="E-Mail"
+        android:textColor="@color/black"
+        android:textSize="10pt"
+        android:textStyle="bold"
+        android:layout_below="@id/txt_no_hp"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="20dp"
+        />
+
+    <TextView
+        android:id="@+id/txt_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="email.email@email.com"
+        android:textColor="@color/grey2"
+        android:textSize="8pt"
+        android:textStyle="bold"
+        android:layout_below="@id/txt_email_profil"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="50dp"
+        />
+
+    <TextView
+        android:id="@+id/txt_alamat_profil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Alamat"
+        android:textColor="@color/black"
+        android:textSize="10pt"
+        android:textStyle="bold"
+        android:layout_below="@id/txt_email"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="20dp"
+        />
+
+    <TextView
+        android:id="@+id/txt_alamat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="JL. Soekarno Hatta, Malang"
+        android:textColor="@color/grey2"
+        android:textSize="8pt"
+        android:textStyle="bold"
+        android:layout_below="@id/txt_alamat_profil"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="50dp"
+        />
+
+    <TextView
+        android:id="@+id/txt_jenis_profil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Jenis UMKM"
+        android:textColor="@color/black"
+        android:textSize="10pt"
+        android:textStyle="bold"
+        android:layout_below="@id/txt_alamat"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="20dp"
+        />
+
+    <TextView
+        android:id="@+id/txt_jenis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bisnis Olshop"
+        android:textColor="@color/grey2"
+        android:textSize="8pt"
+        android:textStyle="bold"
+        android:layout_below="@id/txt_jenis_profil"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="50dp"
+        />
+
+    <Button
+        android:id="@+id/btnEditProfil"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginBottom="60dp">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginLeft="50dp"
+        android:text="Edit Profil"
+        android:textAllCaps="false"
+        android:textSize="9pt"
+        android:textColor="@color/black"
+        android:backgroundTint="@color/greensecondary"
+        android:padding="10dp"
+        android:layout_below="@id/txt_jenis"
+        android:layout_centerHorizontal="true"
+        />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+    <Button
+        android:id="@+id/btnKeluar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginLeft="50dp"
+        android:text="Keluar"
+        android:textAllCaps="false"
+        android:textSize="9pt"
+        android:textColor="@color/black"
+        android:backgroundTint="#E3242B"
+        android:padding="10dp"
+        android:layout_below="@+id/btnEditProfil"
+        android:layout_centerHorizontal="true"
+        />
 
-
-        </LinearLayout>
-    </ScrollView>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:layout_width="match_parent"
