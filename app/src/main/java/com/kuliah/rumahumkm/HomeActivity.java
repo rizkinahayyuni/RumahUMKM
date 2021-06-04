@@ -32,6 +32,12 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
+        // Set Username in Dashboard
+        TextView getUsername = findViewById(R.id.txtHai);
+        Bundle bundle = getIntent().getExtras();
+        getUsername.setText("Haiii, "+bundle.getString("Username"));
+        username = bundle.getString("Username");
+
         //Initialize Add Assign Variabel
         BottomNavigationView bottomNavigationView = findViewById(R.id.buttomNavigation);
 
@@ -42,22 +48,27 @@ public class HomeActivity extends AppCompatActivity {
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                Bundle setUsername = new Bundle();
+                setUsername.putString("Username", username);
                 switch (item.getItemId()) {
                     case R.id.dashboard:
                         return true;
                     case R.id.kelas:
-                        startActivity(new Intent(getApplicationContext()
-                                ,KelasActivity.class));
+                        Intent intentKelas = new Intent(getApplicationContext(), KelasActivity.class);
+                        intentKelas.putExtras(setUsername);
+                        startActivity(intentKelas);
                         overridePendingTransition(0,0);
                         return true;
                     case R.id.seminar:
-                        startActivity(new Intent(getApplicationContext()
-                                ,SeminarActivity.class));
+                        Intent intentSeminar = new Intent(getApplicationContext(), SeminarActivity.class);
+                        intentSeminar.putExtras(setUsername);
+                        startActivity(intentSeminar);
                         overridePendingTransition(0,0);
                         return true;
                     case R.id.akun:
-                        startActivity(new Intent(getApplicationContext()
-                                ,AkunActivity.class));
+                        Intent intentAkun = new Intent(getApplicationContext(), AkunActivity.class);
+                        intentAkun.putExtras(setUsername);
+                        startActivity(intentAkun);
                         overridePendingTransition(0,0);
                         return true;
                 }
@@ -65,10 +76,6 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
-        // Set Username in Dashboard
-        TextView getUsername = findViewById(R.id.txtHai);
-        Bundle bundle = getIntent().getExtras();
-        getUsername.setText("Haiii, "+bundle.getString("Username"));
 
         // Recycle View
         recyclerViewKelas = findViewById(R.id.rvKelasPopuler);

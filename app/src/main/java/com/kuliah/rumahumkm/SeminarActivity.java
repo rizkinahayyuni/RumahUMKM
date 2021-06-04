@@ -9,6 +9,7 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -22,11 +23,17 @@ public class SeminarActivity extends AppCompatActivity {
     DBHelper MyDB;
     ArrayList<String> id_seminar, nama_seminar, kategori_seminar;
     CustomAdapterSeminar customAdapterSeminar;
+    String username;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_seminar);
+
+        // Set Username in Dashboard
+        TextView getUsername = findViewById(R.id.txtHai);
+        Bundle bundle = getIntent().getExtras();
+        username = bundle.getString("Username");
 
         //Initialize Add Assign Variabel
         BottomNavigationView bottomNavigationView = findViewById(R.id.buttomNavigation);
@@ -38,22 +45,27 @@ public class SeminarActivity extends AppCompatActivity {
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                Bundle setUsername = new Bundle();
+                setUsername.putString("Username", username);
                 switch (item.getItemId()) {
                     case R.id.dashboard:
-                        startActivity(new Intent(getApplicationContext()
-                                ,HomeActivity.class));
+                        Intent intentHome = new Intent(getApplicationContext(), HomeActivity.class);
+                        intentHome.putExtras(setUsername);
+                        startActivity(intentHome);
                         overridePendingTransition(0,0);
                         return true;
                     case R.id.kelas:
-                        startActivity(new Intent(getApplicationContext()
-                                ,KelasActivity.class));
+                        Intent intentKelas = new Intent(getApplicationContext(), KelasActivity.class);
+                        intentKelas.putExtras(setUsername);
+                        startActivity(intentKelas);
                         overridePendingTransition(0,0);
                         return true;
                     case R.id.seminar:
                         return true;
                     case R.id.akun:
-                        startActivity(new Intent(getApplicationContext()
-                                ,AkunActivity.class));
+                        Intent intentAkun = new Intent(getApplicationContext(), AkunActivity.class);
+                        intentAkun.putExtras(setUsername);
+                        startActivity(intentAkun);
                         overridePendingTransition(0,0);
                         return true;
                 }
@@ -62,7 +74,7 @@ public class SeminarActivity extends AppCompatActivity {
         });
 
         // Recycle View
-        recyclerViewSeminar = findViewById(R.id.rvSeminarPopuler);
+        recyclerViewSeminar = findViewById(R.id.rvDaftarSeminar);
 
         MyDB = new DBHelper(SeminarActivity.this);
         id_seminar = new ArrayList<>();

@@ -7,45 +7,67 @@
     android:layout_height="match_parent"
     tools:context=".KelasActivity">
 
-    <EditText
-        android:id="@+id/search_kelas"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/txtHai"
-        android:layout_margin="20dp"
-        android:background="@drawable/edittext_rounded"
-        android:hint="Search for new knowledge!"
-        android:textSize="8pt"
-        android:padding="15dp"
-        android:drawableLeft="@drawable/icn_search"
-        android:drawablePadding="20dp"
-        />
+        android:layout_height="match_parent"
+        android:layout_marginBottom="60dp">
 
-    <TextView
-        android:id="@+id/txt_kategori_kelas"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:layout_marginLeft="20dp"
-        android:layout_below="@+id/search_kelas"
-        android:text="Kategori Kelas"
-        android:textColor="@color/black"
-        android:textSize="10pt"
-        android:textStyle="bold"
-        />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/txt_rekomendasi_kelas"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:layout_marginLeft="20dp"
-        android:layout_below="@+id/txt_kategori_kelas"
-        android:text="Rekomendasi Kelas"
-        android:textColor="@color/black"
-        android:textSize="10pt"
-        android:textStyle="bold"
-        />
+            <EditText
+                android:id="@+id/search_kelas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtHai"
+                android:layout_margin="20dp"
+                android:background="@drawable/edittext_rounded"
+                android:hint="Search for new knowledge!"
+                android:textSize="8pt"
+                android:padding="15dp"
+                android:drawableLeft="@drawable/icn_search"
+                android:drawablePadding="20dp"
+                />
+
+            <TextView
+                android:id="@+id/txt_kategori_kelas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="20dp"
+                android:layout_below="@+id/search_kelas"
+                android:text="Kategori Kelas"
+                android:textColor="@color/black"
+                android:textSize="10pt"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:id="@+id/txt_rekomendasi_kelas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="20dp"
+                android:layout_below="@+id/txt_kategori_kelas"
+                android:text="Rekomendasi Kelas"
+                android:textColor="@color/black"
+                android:textSize="10pt"
+                android:textStyle="bold"
+                />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvDaftarKelas"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/txt_rekomendasi_kelas"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="30dp"/>
+
+        </LinearLayout>
+    </ScrollView>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:layout_width="match_parent"

@@ -74,12 +74,18 @@ public class DBHelper extends SQLiteOpenHelper {
         String nama2 = "Sukses Bisnis Online Shop";
         String kategori2 = "Pemasaran";
         String nama3 = "Pahami Pajak UMKM";
-        String kategori3 = "Pemasaran";
+        String kategori3 = "Perpajakan";
+        String nama4 = "Desain Pakaian Formal";
+        String kategori4 = "Menjahit";
+        String nama5 = "Memanfaatkan Sosial Media";
+        String kategori5 = "Pemasaran";
 
         SQLiteDatabase MyDB = this.getWritableDatabase();
         ContentValues contentValues1 = new ContentValues();
         ContentValues contentValues2 = new ContentValues();
         ContentValues contentValues3 = new ContentValues();
+        ContentValues contentValues4 = new ContentValues();
+        ContentValues contentValues5 = new ContentValues();
         contentValues1.put("nama_kelas", nama1);
         contentValues1.put("kategori_kelas", kategori1);
         MyDB.insert("kelas", null, contentValues1);
@@ -89,20 +95,32 @@ public class DBHelper extends SQLiteOpenHelper {
         contentValues3.put("nama_kelas", nama3);
         contentValues3.put("kategori_kelas", kategori3);
         MyDB.insert("kelas", null, contentValues3);
+        contentValues4.put("nama_kelas", nama4);
+        contentValues4.put("kategori_kelas", kategori4);
+        MyDB.insert("kelas", null, contentValues4);
+        contentValues5.put("nama_kelas", nama5);
+        contentValues5.put("kategori_kelas", kategori5);
+        MyDB.insert("kelas", null, contentValues5);
     }
 
     public void addSeminar() {
         String nama1 = "Manfaat PEN Bagi UMKM";
         String kategori1 = "Pemasaran";
         String nama2 = "Inovasi UMKM Go DIgital";
-        String kategori2 = "Branding";
+        String kategori2 = "Inovasi";
         String nama3 = "Membangun Brand di Sosmed";
         String kategori3 = "Branding";
+        String nama4 = "Membangun UMKM Kreatif";
+        String kategori4 = "Pengembangan diri";
+        String nama5 = "Standar Keamanan Pangan ";
+        String kategori5 = "Pertanian";
 
         SQLiteDatabase MyDB = this.getWritableDatabase();
         ContentValues contentValues1 = new ContentValues();
         ContentValues contentValues2 = new ContentValues();
         ContentValues contentValues3 = new ContentValues();
+        ContentValues contentValues4 = new ContentValues();
+        ContentValues contentValues5 = new ContentValues();
         contentValues1.put("nama_seminar", nama1);
         contentValues1.put("kategori_seminar", kategori1);
         MyDB.insert("seminar", null, contentValues1);
@@ -112,6 +130,12 @@ public class DBHelper extends SQLiteOpenHelper {
         contentValues3.put("nama_seminar", nama3);
         contentValues3.put("kategori_seminar", kategori3);
         MyDB.insert("seminar", null, contentValues3);
+        contentValues4.put("nama_seminar", nama4);
+        contentValues4.put("kategori_seminar", kategori4);
+        MyDB.insert("seminar", null, contentValues4);
+        contentValues5.put("nama_seminar", nama5);
+        contentValues5.put("kategori_seminar", kategori5);
+        MyDB.insert("seminar", null, contentValues5);
     }
 
     Cursor readAllDataKelas() {
