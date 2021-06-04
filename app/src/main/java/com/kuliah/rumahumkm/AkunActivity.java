@@ -20,8 +20,9 @@ public class AkunActivity extends AppCompatActivity {
         setContentView(R.layout.activity_akun);
 
         // Set Username in Dashboard
-        TextView getUsername = findViewById(R.id.txtHai);
+        TextView getUsername = findViewById(R.id.txt_nama_profil);
         Bundle bundle = getIntent().getExtras();
+        getUsername.setText(bundle.getString("Username"));
         username = bundle.getString("Username");
 
         //Initialize Add Assign Variabel

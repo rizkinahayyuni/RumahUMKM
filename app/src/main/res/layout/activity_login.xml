@@ -71,6 +71,7 @@
             android:layout_below="@id/username1"
             android:textSize="8pt"
             android:padding="15dp"
+            android:inputType="textPassword"
             android:layout_marginRight="25dp"
             android:layout_marginLeft="25dp"
             android:drawableLeft="@drawable/uil_padlock"
