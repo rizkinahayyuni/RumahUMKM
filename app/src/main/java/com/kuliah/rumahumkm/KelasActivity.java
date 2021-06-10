@@ -19,7 +19,6 @@ import java.util.ArrayList;
 public class KelasActivity extends AppCompatActivity {
 
     RecyclerView recyclerViewKelas;
-
     DBHelper MyDB;
     ArrayList<String> id_kelas, nama_kelas, kategori_kelas;
     CustomAdapterKelas customAdapterKelas;
@@ -73,7 +72,7 @@ public class KelasActivity extends AppCompatActivity {
             }
         });
 
-        // Recycle View
+        // Recycle View Daftar Kelas
         recyclerViewKelas = findViewById(R.id.rvDaftarKelas);
 
         MyDB = new DBHelper(KelasActivity.this);
